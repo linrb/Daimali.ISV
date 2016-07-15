@@ -12,8 +12,7 @@
 ###  错误参数
  
  **全局返回参数说明** 
-Code	Message	说明
-1	Success	操作成功
+1	   Success	操作成功
 100000	NULL	Null值错误
 100001	SIGN_ERROR	签名验证失败
 100002	APP_AUTH_ERROR	应用授权失败
@@ -24,12 +23,11 @@ Code	Message	说明
 ### 参数说明
 
  **1.系统参数** 
-名称	类型	是否必填	说明
-[method] 	String	是	商户要调用的App接口名称
-timestamp	String	是	时间戳 统一格式yyyyMMddHHmmss
-app_key	String	是	分配给商户的app_key
-version	String	是	对应接口的版本号 当前为1.0
-sign	String	是	签名，对 API 调用参数（除sign外）进行 md5 加密获得。
+[method]：商户要调用的App接口名称
+timestamp：时间戳 统一格式yyyyMMddHHmmss
+app_key：分配给商户的app_key
+version：对应接口的版本号 当前为1.0
+sign：签名，对 API 调用参数（除sign外）进行 md5 加密获得。
 
  **注：** 
 1.系统参数在每次请求中都是必须的;
@@ -63,5 +61,10 @@ eg:
 
 (可将上面的参数字符串进行MD5加密检测你的加密结果是否一致)
 
-2. 请求链接：http://api.daimali.com/pro/getproducts?app_key=076ba2bcb4a0cb38ce721cc00d27426b&pageindex=1&pagesize=10&sign=BCC7C71CF93F9CDBDB88671B701D8A35&timestamp=20150507162828
+2. 请求链接：```
+http://api.daimali.com/pro/getproducts?app_key=076ba2bcb4a0cb38ce721cc00d27426b&pageindex=1&pagesize=10&sign=BCC7C71CF93F9CDBDB88671B701D8A35&timestamp=20150507162828
+```
 
+
+### 已知BUG
+1. URL重放攻击
