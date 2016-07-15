@@ -61,7 +61,8 @@ eg:
 
 (可将上面的参数字符串进行MD5加密检测你的加密结果是否一致)
 
-2. 请求链接：```
+2. 请求链接：
+```
 http://api.daimali.com/pro/getproducts?app_key=076ba2bcb4a0cb38ce721cc00d27426b&pageindex=1&pagesize=10&sign=BCC7C71CF93F9CDBDB88671B701D8A35
 &timestamp=20150507162828
 ```
