@@ -26,8 +26,8 @@
 [method]：商户要调用的App接口名称
 timestamp：时间戳 统一格式yyyyMMddHHmmss
 app_key：分配给商户的app_key
-version：对应接口的版本号 当前为1.0
-sign：签名，对 API 调用参数（除sign外）进行 md5 加密获得。
+version：对应接口的版本号
+sign：签名，对 API 调用参数（除sign外）进行 md5/rsa 加密获得。
 
  **注：** 
 1.系统参数在每次请求中都是必须的;
@@ -62,7 +62,8 @@ eg:
 (可将上面的参数字符串进行MD5加密检测你的加密结果是否一致)
 
 2. 请求链接：```
-http://api.daimali.com/pro/getproducts?app_key=076ba2bcb4a0cb38ce721cc00d27426b&pageindex=1&pagesize=10&sign=BCC7C71CF93F9CDBDB88671B701D8A35&timestamp=20150507162828
+http://api.daimali.com/pro/getproducts?app_key=076ba2bcb4a0cb38ce721cc00d27426b&pageindex=1&pagesize=10&sign=BCC7C71CF93F9CDBDB88671B701D8A35
+&timestamp=20150507162828
 ```
 
 
